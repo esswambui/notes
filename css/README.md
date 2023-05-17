@@ -102,3 +102,8 @@ Every selector in CSS has a specificity weight. A selector’s specificity weigh
 - id selector ==> 100 points
 - inline style ==> 1000 points
 - !important ==> 10000 points
+### Common CSS Properties
+#### Color
+  - Key words
+  - Hexadecimal
+  - RGB/RGBa
