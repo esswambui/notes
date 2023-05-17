@@ -11,6 +11,7 @@ p {
 }
 ```
 The background color will be green.
+
 ---
 
 When there is more than one style specified for an HTML element, the styles will be implemented in the following order:
@@ -72,5 +73,32 @@ p.center {
 ```
 ##### Universal Selector
 The universal selector (*) selects all HTML elements on the page.
-##### Grouping Selector
+#### Grouping Selector
 The grouping selector selects all the HTML elements with the same style definitions.
+#### Combinator Selector
+##### Descendant combinator
+The " " (space) combinator selects nodes that are descendants of the first element.
+Syntax: A B
+Example: div span will match all <span> elements that are inside a <div> element.
+##### Child combinator
+The > combinator selects nodes that are direct children of the first element.
+Syntax: A > B
+Example: ul > li will match all <li> elements that are nested directly inside a <ul> element.
+##### General sibling combinator
+The ~ combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
+Syntax: A ~ B
+Example: p ~ span will match all <span> elements that follow a <p>, immediately or not.
+
+##### Adjacent sibling combinator
+The + combinator matches the second element only if it immediately follows the first element.
+Syntax: A + B
+Example: h2 + p will match the first <p> element that immediately follows an h2 element.
+
+### Calculating Specificity
+Every selector in CSS has a specificity weight. A selector’s specificity weight, along with its placement in the cascade, identifies how its styles will be rendered.
+
+- element selector ==> 1 point
+- class selector ==> 10 points
+- id selector ==> 100 points
+- inline style ==> 1000 points
+- !important ==> 10000 points
