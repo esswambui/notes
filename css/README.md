@@ -93,7 +93,7 @@ Example: p ~ span will match all <span> elements that follow a <p>, immediately 
 The + combinator matches the second element only if it immediately follows the first element.
 Syntax: A + B
 Example: h2 + p will match the first <p> element that immediately follows an h2 element.
-
+[Learn more details in MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 ### Calculating Specificity
 Every selector in CSS has a specificity weight. A selector’s specificity weight, along with its placement in the cascade, identifies how its styles will be rendered.
 
