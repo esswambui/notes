@@ -107,3 +107,8 @@ Every selector in CSS has a specificity weight. A selector’s specificity weigh
   - Key words
   - Hexadecimal
   - RGB/RGBa
+  - HSL/HSLa
+ ##### Common CSS Colours
+  ![image](https://github.com/esswambui/notes/assets/76427693/8a3e5f93-646d-4830-b09d-a2987681f753)
+![image](https://github.com/esswambui/notes/assets/76427693/3e6f38e4-0e00-4500-ac4c-41154f9bb667)
+
