@@ -111,6 +111,7 @@ Every selector in CSS has a specificity weight. A selector’s specificity weigh
  ##### Common CSS Colours
 ![image](https://github.com/esswambui/notes/assets/76427693/8a3e5f93-646d-4830-b09d-a2987681f753)
 ![image](https://github.com/esswambui/notes/assets/76427693/3e6f38e4-0e00-4500-ac4c-41154f9bb667)
+
 ####Length
 ##### Absolute
 Absolute length values are the simplest length values, as they are fixed to a physical measurement, such as inches, centimeters, or millimeters. The most popular absolute unit of measurement is known as the pixel and is represented by the px unit notation.
@@ -132,6 +133,19 @@ A single em unit is equivalent to an element’s font size. So, for example, if 
 When a font size is not explicitly stated for an element, the em unit will be relative to the font size of the closest parent element with a stated font size.
 ###### rem
 rem (short for “root-em”) units dictate an element’s font size relative to the size of the root element. By default, most browsers use a font size value of 16px. So, if the root element is 16px, an element with the value 1rem will also equal 16px. Therefore, rem units are useful for scaling CSS elements in relation to the size of the root element — even if you don’t know what the default font size will be.
-### Useful Resources
+## Box Model
+### Display
+Exactly how elements are displayed—as block-level elements, inline elements, or something else—is determined by the display property. Every element has a default display property value; however, as with all other property values, that value may be overwritten. There are quite a few values for the display property, but the most common are 
+  - block
+  - inline
+  - inline-block
+  - none.
+We can change an element’s display property value by selecting that element within CSS and declaring a new display property value. A value of block will make that element a block-level element.
+### What Is the Box Model?#what-is-the-box-model
+According to the box model concept, every element on a page is a rectangular box and may have width, height, padding, borders, and margins.
+### Working with the Box Model
+Every element is a rectangular box, and there are several properties that determine the size of that box. The core of the box is defined by the width and height of an element, which may be determined by the display property, by the contents of the element, or by specified width and height properties. padding and then border expand the dimensions of the box outward from the element’s width and height. Lastly, any margin we have specified will follow the border.
+Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.
+## Useful Resources
 - Get color palette : [coolors.co](https://coolors.co/)
 - CSS Gradient: [cssgradient.io](https://cssgradient.io/)
