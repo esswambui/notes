@@ -149,3 +149,5 @@ Each part of the box model corresponds to a CSS property: width, height, padding
 ## Useful Resources
 - Get color palette : [coolors.co](https://coolors.co/)
 - CSS Gradient: [cssgradient.io](https://cssgradient.io/)
+- Color Picker from Image: [image color picker](https://imagecolorpicker.com/en)
+- Get complimentary color: [adobe colors](https://color.adobe.com/create/color-wheel)
