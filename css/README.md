@@ -146,8 +146,10 @@ According to the box model concept, every element on a page is a rectangular box
 ### Working with the Box Model
 Every element is a rectangular box, and there are several properties that determine the size of that box. The core of the box is defined by the width and height of an element, which may be determined by the display property, by the contents of the element, or by specified width and height properties. padding and then border expand the dimensions of the box outward from the element’s width and height. Lastly, any margin we have specified will follow the border.
 Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.
+	
 ---
-#####CODE FOR FLOATS CLEAR FIX
+	
+##### CODE FOR FLOATS CLEAR FIX
   ```css
   .clearfix:after {
      content: ".";
@@ -162,6 +164,7 @@ Each part of the box model corresponds to a CSS property: width, height, padding
 	clear: both;
 }
   ```
+	
 ---
   
   ## Useful Resources
