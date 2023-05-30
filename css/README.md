@@ -83,7 +83,7 @@ Example: div span will match all <span> elements that are inside a <div> element
 ##### Child combinator
 The > combinator selects nodes that are direct children of the first element.
 Syntax: A > B
-Example: ul > li will match all <li> elements that are nested directly inside a <ul> element.
+Example: section > p will match all <p> elements that are nested directly inside a <section> element.
 ##### General sibling combinator
 The ~ combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
 Syntax: A ~ B
