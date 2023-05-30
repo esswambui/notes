@@ -112,17 +112,13 @@ Every selector in CSS has a specificity weight. A selector’s specificity weigh
 ![image](https://github.com/esswambui/notes/assets/76427693/8a3e5f93-646d-4830-b09d-a2987681f753)
 ![image](https://github.com/esswambui/notes/assets/76427693/3e6f38e4-0e00-4500-ac4c-41154f9bb667)
 
-####Length
+#### Length
 ##### Absolute
 Absolute length values are the simplest length values, as they are fixed to a physical measurement, such as inches, centimeters, or millimeters. The most popular absolute unit of measurement is known as the pixel and is represented by the px unit notation.
 ###### Pixels
 The pixel is equal to 1/96th of an inch; thus there are 96 pixels in an inch. The exact measurement of a pixel, however, may vary slightly between high-density and low-density viewing devices.
 Pixels have been around for quite some time and are commonly used with a handful of different properties. The code here is using pixels to set the font size of all paragraphs to 14 pixels.
 ##### Relative Lengths
-In addition to absolute length values, there are also relative length values. Relative length values are a little more complicated, as they are not fixed units of measurement; they rely on the length of another measurement.
-###### Percentages
-Percentages, represented by the % unit notation, are one of the most popular relative values. Percentage lengths are defined in relation to the length of another object. For example, to set the width of an element to 50%, we have to know the width of its parent element, the element it is nested within, and then identify 50% of the parent element’s width.
-  Relative Lengths
 In addition to absolute length values, there are also relative length values. Relative length values are a little more complicated, as they are not fixed units of measurement; they rely on the length of another measurement.
 ###### Percentages
 Percentages, represented by the % unit notation, are one of the most popular relative values. Percentage lengths are defined in relation to the length of another object. For example, to set the width of an element to 50%, we have to know the width of its parent element, the element it is nested within, and then identify 50% of the parent element’s width.
@@ -133,6 +129,9 @@ A single em unit is equivalent to an element’s font size. So, for example, if 
 When a font size is not explicitly stated for an element, the em unit will be relative to the font size of the closest parent element with a stated font size.
 ###### rem
 rem (short for “root-em”) units dictate an element’s font size relative to the size of the root element. By default, most browsers use a font size value of 16px. So, if the root element is 16px, an element with the value 1rem will also equal 16px. Therefore, rem units are useful for scaling CSS elements in relation to the size of the root element — even if you don’t know what the default font size will be.
+
+---
+	
 ## Box Model
 ### Display
 Exactly how elements are displayed—as block-level elements, inline elements, or something else—is determined by the display property. Every element has a default display property value; however, as with all other property values, that value may be overwritten. There are quite a few values for the display property, but the most common are 
@@ -146,9 +145,100 @@ According to the box model concept, every element on a page is a rectangular box
 ### Working with the Box Model
 Every element is a rectangular box, and there are several properties that determine the size of that box. The core of the box is defined by the width and height of an element, which may be determined by the display property, by the contents of the element, or by specified width and height properties. padding and then border expand the dimensions of the box outward from the element’s width and height. Lastly, any margin we have specified will follow the border.
 Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.
+### Width & Height
+Every element has default width and height. That width and height may be 0 pixels, but browsers, by default, will render every element with size. Depending on how an element is displayed, the default width and height may be adequate. If an element is key to the layout of a page, it may require specified width and height property values. In this case, the property values for non-inline elements may be specified.
+#### Width
+The default width of an element depends on its display value. Block-level elements have a default width of 100%, consuming the entire horizontal space available. Inline and inline-block elements expand and contract horizontally to accommodate their content. Inline-level elements cannot have a fixed size, thus the width and height properties are only relevant to non-inline elements. 
+#### Height
+The default height of an element is determined by its content. An element will expand and contract vertically as necessary to accommodate its content
 	
 ---
 	
+## Positioning with Floats
+One way to position elements on a page is with the float property. The float property is pretty versatile and can be used in a number of different ways.
+
+Essentially, the float property allows us to take an element, remove it from the normal flow of a page, and position it to the left or right of its parent element. All other elements on the page will then flow around the floated element. An <img> element floated to the side of a few paragraphs of text, for example, will allow the paragraphs to wrap around the image as necessary.
+
+When the float property is used on multiple elements at the same time, it provides the ability to create a layout by floating elements directly next to or opposite each other, as seen in multiple-column layouts.
+
+The float property accepts a few values; the two most popular values are left and right, which allow elements to be floated to the left or right of their parent element.
+```css
+img {
+  float: left;
+}
+```
+### Floats in Practice
+Let’s create a common page layout with a header at the top, two columns in the center, and a footer at the bottom. Ideally this page would be marked up using the <header>, <section>, <aside>, and <footer> elements. The HTML may look like this:
+```html
+<header>...</header>
+<section>...</section>
+<aside>...</aside>
+<footer>...</footer>
+```
+Here the <section> and <aside> elements, as block-level elements, will be stacked on top of one another by default. However, we want these elements to sit side by side. By floating the <section> to the left and the <aside> to the right, we can position them as two columns sitting opposite one another. Our CSS should look like this:
+```css
+section {
+  float: left;
+}
+aside {
+  float: right;
+}
+```
+For reference, when an element is floated, it will float all the way to the edge of its parent element. If there isn’t a parent element, the floated element will then float all the way to the edge of the page.
+
+When we float an element, we take it out of the normal flow of the HTML document. This causes the width of that element to default to the width of the content within it. Sometimes, such as when we’re creating columns for a reusable layout, this behavior is not desired. It can be corrected by adding a fixed width property value to each column. Additionally, to prevent floated elements from touching one another, causing the content of one to sit directly next to the content of the other, we can use the margin property to create space between elements.
+
+Here, we are extending the previous code block, adding a margin and width to each column to better shape our desired outcome.
+```css
+section {
+  float: left;
+  margin: 0 1.5%;
+  width: 63%;
+}
+aside {
+  float: right;
+  margin: 0 1.5%;
+  width: 30%;
+}
+```
+With two columns we can float one column to the left and another to the right, but with more columns we must change our approach. Say, for example, we’d like to have a row of three columns between our <header> and <footer> elements. If we drop our <aside> element and use three <section> elements, our HTML might look like this:
+```html
+<header>...</header>
+<section>...</section>
+<section>...</section>
+<section>...</section>
+<footer>...</footer>
+```
+To position these three <section> elements in a three-column row, instead of floating one column to the left and one column to the right, we’ll float all three <section> elements to the left. We’ll also need to adjust the width of the <section> elements to account for the additional columns and to get them to sit one next to the other.
+```css
+section {
+  float: left;
+  margin: 0 1.5%;
+  width: 30%;
+}
+```
+### Clearing & Containing Floats
+The float property was originally designed to allow content to wrap around images. An image could be floated, and all of the content surrounding that image could then naturally flow around it. Although this works great for images, the float property was never actually intended to be used for layout and positioning purposes, and thus it comes with a few pitfalls.
+
+One of those pitfalls is that occasionally the proper styles will not render on an element that it is sitting next to or is a parent element of a floated element. When an element is floated, it is taken out of the normal flow of the page, and, as a result, the styles of elements around that floated element can be negatively impacted.
+
+Often margin and padding property values aren’t interpreted correctly, causing them to blend into the floated element; other properties can be affected, too.
+
+Another pitfall is that sometimes unwanted content begins to wrap around a floated element. Removing an element from the flow of the document allows all the elements around the floated element to wrap and consume any available space around the floated element, which is often undesired.
+
+With our previous two-column example, after we floated the <section> and <aside> elements, and before we set a width property value on either of them, the content within the <footer> element would have wrapped in between the two floated elements above it, filling in any available space. Consequently, the <footer> element would have sat in the gutter between the <section> and <aside> elements, consuming the available space.
+	
+To prevent content from wrapping around floated elements, we need to clear, or contain, those floats and return the page to its normal flow. We’ll proceed by looking at how to clear floats, and then we’ll take a look at how to contain floats.
+
+Clearing Floats
+Clearing floats is accomplished using the clear property, which accepts a few different values: the most commonly used values being *left, right, and both.*
+The left value will clear left floats, while the right value will clear right floats. The both value, however, will clear both left and right floats and is often the most ideal value.
+```css
+footer {
+  clear: both;
+}
+```
+
 ##### CODE FOR FLOATS CLEAR FIX
   ```css
   .clearfix:after {
@@ -167,7 +257,7 @@ Each part of the box model corresponds to a CSS property: width, height, padding
 	
 ---
   
-  ## Useful Resources
+## Useful Resources
 - Get color palette : [coolors.co](https://coolors.co/)
 - CSS Gradient: [cssgradient.io](https://cssgradient.io/)
 - Color Picker from Image: [image color picker](https://imagecolorpicker.com/en)
