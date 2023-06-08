@@ -289,3 +289,4 @@ A sticky element toggles between relative and fixed, depending on the scroll pos
 - CSS Gradient: [cssgradient.io](https://cssgradient.io/)
 - Color Picker from Image: [image color picker](https://imagecolorpicker.com/en)
 - Get complimentary color: [adobe colors](https://color.adobe.com/create/color-wheel)
+- Get icons: [Font Awesome](https://fontawesome.com/icons) and [cdn link to add to HTML](https://cdnjs.com/libraries/font-awesome) *choose the first link*
