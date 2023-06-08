@@ -256,7 +256,31 @@ footer {
   ```
 	
 ---
-  
+### Uniquely Positioning Elements
+Every now and then we’ll want to precisely position an element. For these situations we can use the position property in connection with box offset properties.
+
+The position property identifies how an element is positioned on a page and whether or not it will appear within the normal flow of a document. This is used in conjunction with the box offset properties—top, right, bottom, and left—which identify exactly where an element will be positioned by moving elements in a number of different directions.
+
+#### Position Static
+By default every element has a position value of **static**, which means that it exists in the normal flow of a document and it doesn’t accept any box offset properties. The static value is most commonly overwritten with a relative or absolute value.
+#### Position Relative
+The **relative** value for the position property allows elements to appear within the normal flow a page, leaving space for an element as intended while not allowing other elements to flow around it; however, it also allows an element’s display position to be modified with the box offset properties. 
+	
+With relatively positioned elements, it’s important to know that the box offset properties identify where an element will be moved from given its original position. When we position the element using the box offset properties, the element overlaps the element below it rather than moving that element down as the margin or padding properties would.
+	
+#### Position Absolute
+The **absolute** value for the position property is different from the relative value in that an element with a position value of absolute will not appear within the normal flow of a document, and the original space and position of the absolutely positioned element will not be preserved.
+
+Additionally, absolutely positioned elements are moved in relation to their closest relatively positioned parent element. Should a relatively positioned parent element not exist, the absolutely positioned element will be positioned in relation to the <body> element. 
+
+#### Position Fixed
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+A fixed element does not leave a gap in the page where it would normally have been located.
+	
+#### Position Sticky
+An element with position: sticky; is positioned based on the user's scroll position.
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
 ## Useful Resources
 - Get color palette : [coolors.co](https://coolors.co/)
 - CSS Gradient: [cssgradient.io](https://cssgradient.io/)
