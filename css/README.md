@@ -256,6 +256,7 @@ footer {
   ```
 	
 ---
+	
 ### Uniquely Positioning Elements
 Every now and then we’ll want to precisely position an element. For these situations we can use the position property in connection with box offset properties.
 
@@ -274,13 +275,15 @@ The **absolute** value for the position property is different from the relative 
 Additionally, absolutely positioned elements are moved in relation to their closest relatively positioned parent element. Should a relatively positioned parent element not exist, the absolutely positioned element will be positioned in relation to the <body> element. 
 
 #### Position Fixed
-An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+An element with **position: fixed;** is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
 A fixed element does not leave a gap in the page where it would normally have been located.
 	
 #### Position Sticky
-An element with position: sticky; is positioned based on the user's scroll position.
+An element with **position: sticky;** is positioned based on the user's scroll position.
 A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
 
+---
+	
 ## Useful Resources
 - Get color palette : [coolors.co](https://coolors.co/)
 - CSS Gradient: [cssgradient.io](https://cssgradient.io/)
