@@ -323,7 +323,7 @@ By default, flex items will all try to fit onto one line. You can change that an
 - wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
 #### flex-flow
 This is a shorthand for the **flex-direction** and **flex-wrap** properties, which together define the flex container’s main and cross axes. The default value is ```row nowrap.```
-### justify-content
+#### justify-content
 This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.
 - flex-start (default): items are packed toward the start of the flex-direction.
 - flex-end: items are packed toward the end of the flex-direction.
@@ -331,6 +331,15 @@ This defines the alignment along the main axis. It helps distribute extra free s
 - space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
 - space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces     aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against   the container edge, but two units of space between the next item because that next item has its own spacing that applies.
 - space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+#### align-items
+This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis.
+- stretch (default): stretch to fill the container (still respect min-width/max-width)
+- flex-start: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.
+- flex-end: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.
+- center: items are centered in the cross-axis
+baseline: items are aligned such as their baselines align
+#### align-content
+This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
 	
 ---
 	
