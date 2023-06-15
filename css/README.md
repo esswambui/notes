@@ -340,7 +340,33 @@ This defines the default behavior for how flex items are laid out along the cros
 baseline: items are aligned such as their baselines align
 #### align-content
 This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
-	
+
+## CSS Grid
+### Introduction
+CSS Grid Layout (aka “Grid” or “CSS Grid”), is a two-dimensional grid-based layout system.
+To get started you have to define a container element as a grid with display: grid, set the column and row sizes with grid-template-columns and grid-template-rows, and then place its child elements into the grid with grid-column and grid-row. 
+### Terminology
+#### Grid Container
+The element on which display: grid is applied. It’s the direct parent of all the grid items.
+#### Grid Item
+The children (i.e. direct descendants) of the grid container. 
+#### Grid Line
+The dividing lines that make up the structure of the grid. They can be either vertical (“column grid lines”) or horizontal (“row grid lines”) and reside on either side of a row or column. Here the yellow line is an example of a column grid line.
+![image](https://github.com/esswambui/notes/assets/76427693/98720596-d430-4f71-a238-58ec32a12521)
+
+#### Grid Cell
+The space between two adjacent row and two adjacent column grid lines. It’s a single “unit” of the grid. Here’s the grid cell between row grid lines 1 and 2, and column grid lines 2 and 3.
+![image](https://github.com/esswambui/notes/assets/76427693/c37cc7f6-506b-4c52-a067-2d2bcb0c14df)
+
+#### Grid Track
+The space between two adjacent grid lines. You can think of them as the columns or rows of the grid. Here’s the grid track between the second and third-row grid lines.
+![image](https://github.com/esswambui/notes/assets/76427693/97cadbd7-bb26-4a4f-840b-167e01ec762f)
+
+#### Grid Area
+The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells. Here’s the grid area between row grid lines 1 and 3, and column grid lines 1 and 3.
+![image](https://github.com/esswambui/notes/assets/76427693/4a4fca9b-a2e5-45ad-8348-750290dfd91c)
+
+ 
 ---
 	
 ## Useful Resources
