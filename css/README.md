@@ -364,6 +364,7 @@ The space between two adjacent grid lines. You can think of them as the columns 
 
 #### Grid Area
 The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells. Here’s the grid area between row grid lines 1 and 3, and column grid lines 1 and 3.
+
 ![image](https://github.com/esswambui/notes/assets/76427693/4a4fca9b-a2e5-45ad-8348-750290dfd91c)
 
  
