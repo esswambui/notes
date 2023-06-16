@@ -378,6 +378,19 @@ The grid container properties are:
 - justify-items
 - align-content
 - align-items
+### Grid Item Properties?
+A grid item's properties specify how browsers should layout a specified item within the grid box model.
+The grid item properties are:
+- justify-self
+- align-self
+- grid-column-start
+- grid-column-end
+- grid-column
+- grid-row-start
+- grid-row-end
+- grid-row
+- grid-area
+- grid-template-areas
 
 ---
 
