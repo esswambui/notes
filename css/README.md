@@ -367,6 +367,53 @@ The total space surrounded by four grid lines. A grid area may be composed of an
 
 ![image](https://github.com/esswambui/notes/assets/76427693/4a4fca9b-a2e5-45ad-8348-750290dfd91c)
 
+ ## Responsive Web Design
+ ### Introduction
+ Responsive web design is the practice of building a website suitable to work on every device and every screen size, no matter how large or small, mobile or desktop. Responsive web design is focused around providing an intuitive and gratifying experience for everyone. Desktop computer and cell phone users alike all benefit from responsive websites.
+### Media Queries
+Media queries provide the ability to specify different styles for individual browser and device circumstances, the width of the viewport or device orientation.
+Generally speaking it is recommend to use the @media rule inside of an existing style sheet to avoid any additional HTTP requests.
+
+Each media query may include a media type followed by one or more expressions. Common media types include all, screen, print, tv, and braille. The HTML5 specification includes new media types, even including 3d-glasses. Should a media type not be specified the media query will default the media type to screen.
+
+The media query expression that follows the media type may include different media features and values, which then allocate to be true or false. When a media feature and value allocate to true, the styles are applied. If the media feature and value allocate to false the styles are ignored.
+
+#### Logical Operators in Media Queries
+Logical operators in media queries help build powerful expressions. There are three different logical operators available for use within media queries, including and, not, and only.
+
+Using the and logical operator within a media query allows an extra condition to be added, making sure that a browser or devices does both a, b, c, and so forth. Multiple individual media queries can be comma separated, acting as an unspoken or operator. The example below selects all media types between 800 and 1024 pixels wide.
+```css
+@media all and (min-width: 800px) and (max-width: 1024px) {...}
+
+```
+#### Using Minimum & Maximum Prefixes
+The min and max prefixes can be used on quite a few media features. The min prefix indicates a values of greater than or equal to while the max prefix indicates a value of less than or equal to. Using min and max prefixes avoid any conflict with the general HTML syntax, specifically not using the < and > symbols.
+#### Orientation Media Feature
+The orientation media feature determines if a device is in the landscape or portrait orientation. The landscape mode is triggered when the display is wider than taller, and the portrait mode is triggered when the display is taller than wider. This media feature plays a large part with mobile devices.
+```css
+@media all and (orientation: landscape) {...}
+```
+#### Identifying Breakpoints
+Your instinct might be to write media query breakpoints around common viewport sizes as determined by different device resolutions, such as 320px, 480px, 768px, 1024px, 1224px, and so forth. This is great but may not always work.
+
+When building a responsive website it should adjust to an array of different viewport sizes, regardless of the device. Breakpoints should only be introduced when a website starts to break, look weird, or the experience is being hampered.
+
+Additionally, new devices and resolutions are being released all of the time. Trying to keep up with these changes could be an endless process.
+
+### Mobile First
+One popular technique with using media queries is called mobile first. The mobile first approach includes using styles targeted at smaller viewports as the default styles for a website, then use media queries to add styles as the viewport grows.
+
+The operating belief behind mobile first design is that a user on a mobile device, commonly using a smaller viewport, shouldn’t have to load the styles for a desktop computer only to have them over written with mobile styles later. Doing so is a waste of bandwidth. Bandwidth that is precious to any users looking for a snappy website.
+
+The mobile first approach also advocates designing with the constraints of a mobile user in mind. 
+A breakout of mobile first media queries might look at bit like the following.
+```css
+/* Default styles first then media queries */
+@media screen and (min-width: 400px)  {...}
+@media screen and (min-width: 600px)  {...}
+@media screen and (min-width: 1000px) {...}
+@media screen and (min-width: 1400px) {...}
+```
  
 ---
 	
