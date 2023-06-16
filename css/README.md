@@ -367,6 +367,20 @@ The total space surrounded by four grid lines. A grid area may be composed of an
 
 ![image](https://github.com/esswambui/notes/assets/76427693/4a4fca9b-a2e5-45ad-8348-750290dfd91c)
 
+### Grid Container Properties
+A grid container's properties specify how browsers should layout items within the grid box model.
+The grid container properties are:
+- grid-template-columns
+- grid-template-rows
+- grid-auto-columns- 
+- grid-auto-rows
+- justify-content
+- justify-items
+- align-content
+- align-items
+
+---
+
  ## Responsive Web Design
  ### Introduction
  Responsive web design is the practice of building a website suitable to work on every device and every screen size, no matter how large or small, mobile or desktop. Responsive web design is focused around providing an intuitive and gratifying experience for everyone. Desktop computer and cell phone users alike all benefit from responsive websites.
